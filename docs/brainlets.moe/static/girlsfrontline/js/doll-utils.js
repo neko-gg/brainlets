@@ -342,7 +342,7 @@ export default class dollUtils {
     $.ajax({
       async: false,
       dataType: 'json',
-      url: '/static/girlsfrontline/dolls.json',
+      url: '../../static/girlsfrontline/dolls.json',
       success: function (data, status, xhr) {
         dollData.push(...data);
 

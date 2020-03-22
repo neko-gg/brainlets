@@ -547,7 +547,7 @@ input[type="number"] {
 }
 
 .formation-3x3-container {
-  background-image: url(/static/girlsfrontline/sim/background.jpg);
+  background-image: url(../../girlsfrontline/sim/background.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 570px;
@@ -559,7 +559,7 @@ input[type="number"] {
   width: 129px;
   height: 85px;
   position: relative;
-  background-image: url("/static/girlsfrontline/sim/dolls/icon/spritesheet.png");
+  background-image: url("../../girlsfrontline/sim/dolls/icon/spritesheet.png");
   background-repeat: no-repeat;
 }
 

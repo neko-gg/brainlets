@@ -53,7 +53,7 @@ $(function () {
   $.ajax({
     async: false,
     dataType: 'json',
-    url: '/static/girlsfrontline/equips.json',
+    url: '../../static/girlsfrontline/equips.json',
     success: function (data, status, xhr) {
       equipData = data;
     },
@@ -68,7 +68,7 @@ $(function () {
   $.ajax({
     async: false,
     dataType: 'json',
-    url: '/static/girlsfrontline/fairies.json',
+    url: '../../static/girlsfrontline/fairies.json',
     success: function (data, status, xhr) {
       fairyData = data;
     },
@@ -81,7 +81,7 @@ $(function () {
   $.ajax({
     async: false,
     dataType: 'json',
-    url: '/static/girlsfrontline/talents.json',
+    url: '../../static/girlsfrontline/talents.json',
     success: function (data, status, xhr) {
       talentData = data;
     },
@@ -311,7 +311,7 @@ function initDollSelectModal() {
     let optional_skill2 = doll.tooltip_skill2 ?
       `<hr>
   <div class="row">
-  <div class="col-2 pl-3 pr-1"><div class="float-right"><img src="/static/girlsfrontline/sim/dolls/icon/skillicon/${doll.icon_name_skill2 ? doll.icon_name_skill2 : 'letiablebuff'}.png" class="img-fluid" /></div></div>
+  <div class="col-2 pl-3 pr-1"><div class="float-right"><img src="../../static/girlsfrontline/sim/dolls/icon/skillicon/${doll.icon_name_skill2 ? doll.icon_name_skill2 : 'letiablebuff'}.png" class="img-fluid" /></div></div>
     <div class="col-10 pl-1 pr-3 text-left small"><b>${doll.name_skill2}</b><br />${doll.tooltip_skill2 ? doll.tooltip_skill2 : 'N/A'}</div>
   </div>` : '';
 
@@ -327,26 +327,26 @@ function initDollSelectModal() {
         <div class="chibi-plus-bar chibi-plus-horizontal"></div>
         <div class="chibi-plus-bar chibi-plus-vertical"></div>
       </div>
-      <div><img src="/static/girlsfrontline/sim/dolls/${doll.id}.png" class="img-tooltip-chibi" data-id="${doll.id}"/></div>
+      <div><img src="../../static/girlsfrontline/sim/dolls/${doll.id}.png" class="img-tooltip-chibi" data-id="${doll.id}"/></div>
       <div class="">
-        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="/static/girlsfrontline/sim/hp.png" /><span class="doll_tooltip_stat_caption">${dolldummy.hp * 5}</span></div>
-        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="/static/girlsfrontline/sim/crit.png" /><span class="doll_tooltip_stat_caption">${dolldummy.crit}%</span></div>
+        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="../../static/girlsfrontline/sim/hp.png" /><span class="doll_tooltip_stat_caption">${dolldummy.hp * 5}</span></div>
+        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="../../static/girlsfrontline/sim/crit.png" /><span class="doll_tooltip_stat_caption">${dolldummy.crit}%</span></div>
       </div>
       <div class="">
-        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="/static/girlsfrontline/sim/fp.png" /><span class="doll_tooltip_stat_caption">${dolldummy.fp}</span></div>
-        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="/static/girlsfrontline/sim/critdmg.png" /><span class="doll_tooltip_stat_caption">${dolldummy.critdmg + 100}%</span></div>
+        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="../../static/girlsfrontline/sim/fp.png" /><span class="doll_tooltip_stat_caption">${dolldummy.fp}</span></div>
+        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="../../static/girlsfrontline/sim/critdmg.png" /><span class="doll_tooltip_stat_caption">${dolldummy.critdmg + 100}%</span></div>
       </div>
       <div class="">
-        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="/static/girlsfrontline/sim/acc.png" /><span class="doll_tooltip_stat_caption">${dolldummy.acc}</span></div>
-        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="/static/girlsfrontline/sim/rounds.png" /><span class="doll_tooltip_stat_caption">${dolldummy.rounds == 0 ? '-' : dolldummy.rounds}</span></div>
+        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="../../static/girlsfrontline/sim/acc.png" /><span class="doll_tooltip_stat_caption">${dolldummy.acc}</span></div>
+        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="../../static/girlsfrontline/sim/rounds.png" /><span class="doll_tooltip_stat_caption">${dolldummy.rounds == 0 ? '-' : dolldummy.rounds}</span></div>
       </div>
       <div class="">
-        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="/static/girlsfrontline/sim/eva.png" /><span class="doll_tooltip_stat_caption">${dolldummy.eva}</span></div>
-        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="/static/girlsfrontline/sim/armor.png" /><span class="doll_tooltip_stat_caption">${dolldummy.armor == 0 ? '-' : dolldummy.armor}</span></div>
+        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="../../static/girlsfrontline/sim/eva.png" /><span class="doll_tooltip_stat_caption">${dolldummy.eva}</span></div>
+        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="../../static/girlsfrontline/sim/armor.png" /><span class="doll_tooltip_stat_caption">${dolldummy.armor == 0 ? '-' : dolldummy.armor}</span></div>
       </div>
       <div class="">
-        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="/static/girlsfrontline/sim/rof.png" /><span class="doll_tooltip_stat_caption">${dolldummy.rof}</span></div>
-        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="/static/girlsfrontline/sim/ap.png" /><span class="doll_tooltip_stat_caption">${dolldummy.ap}</span></div>
+        <div class="doll_tooltip_stat_container_left"><img class="aura_container_img" src="../../static/girlsfrontline/sim/rof.png" /><span class="doll_tooltip_stat_caption">${dolldummy.rof}</span></div>
+        <div class="doll_tooltip_stat_container_right"><img class="aura_container_img" src="../../static/girlsfrontline/sim/ap.png" /><span class="doll_tooltip_stat_caption">${dolldummy.ap}</span></div>
       </div>
   </div>
   <div class="col-9">
@@ -362,7 +362,7 @@ function initDollSelectModal() {
     </div>
     ${`<div class="hr-sect">Art: ${doll.artist} | Voice:&nbsp;<a href="https://myanimelist.net/search/all?q=${encodeURI(doll.voice)}"> ${doll.voice} </a></div>`}
     <div class="row">
-      <div class="col-2 pl-3 px-1"><div class="float-right"><img src="/static/girlsfrontline/sim/dolls/icon/skillicon/${doll.icon_name_skill1 ? doll.icon_name_skill1 : 'letiablebuff'}.png" class="img-fluid" /></div></div>
+      <div class="col-2 pl-3 px-1"><div class="float-right"><img src="../../static/girlsfrontline/sim/dolls/icon/skillicon/${doll.icon_name_skill1 ? doll.icon_name_skill1 : 'letiablebuff'}.png" class="img-fluid" /></div></div>
       <div class="col-10 pl-1 pr-3 text-left small"><b>${doll.name_skill1}</b><br />${doll.tooltip_skill1}</div>
     </div>
     ${optional_skill2}
@@ -389,7 +389,7 @@ function initDollSelectModal() {
       let tileEffectAmount = typeof doll.tiles.effect[tileEffect] == 'object' ? doll.tiles.effect[tileEffect][1] : doll.tiles.effect[tileEffect];
       if (tileEffectAmount != 0) {
         tileBuffContainer.append(
-          $('<div>').append($('<img>').prop('src', `/static/girlsfrontline/sim/${tileEffect}.png`).addClass('aura_container_img')).append(
+          $('<div>').append($('<img>').prop('src', `../../static/girlsfrontline/sim/${tileEffect}.png`).addClass('aura_container_img')).append(
             $('<span>').html(`${tileEffectAmount}%`)));
       }
     }
@@ -632,7 +632,7 @@ function getTileGridHTML(doll) {
 function initEquipSelectModal() {
   for (let i = 0; i < equipData.length; i++) {
     let equip = equipData[i];
-    $('#equip-select .stars' + equip.rarity).append('<button type="button" class="btn mb-1 mr-1" data-id="' + equip.id + '" data-type="' + equip.type + '" data-toggle="tooltip" data-placement="top" data-original-title="' + equip.tooltip + '"><img src="/static/girlsfrontline/sim/equips/' + equip.type + '.png" class="img-fluid"></img></button>');
+    $('#equip-select .stars' + equip.rarity).append('<button type="button" class="btn mb-1 mr-1" data-id="' + equip.id + '" data-type="' + equip.type + '" data-toggle="tooltip" data-placement="top" data-original-title="' + equip.tooltip + '"><img src="../../static/girlsfrontline/sim/equips/' + equip.type + '.png" class="img-fluid"></img></button>');
   }
 }
 
@@ -767,63 +767,63 @@ function generateSavedTeamGrid(team) {
   htmlstring += '<div class="row no-gutters saved-team-row">';
   htmlstring += '<div class="col border border-dark saved-team-col">';
   if (12 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[12] + '.png" class="pos12 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[12] + '.png" class="pos12 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos12 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos12 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '<div class="col border-top border-bottom border-dark saved-team-col">';
   if (13 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[13] + '.png" class="pos13 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[13] + '.png" class="pos13 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos13 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos13 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '<div class="col border border-dark saved-team-col">';
   if (14 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[14] + '.png" class="pos14 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[14] + '.png" class="pos14 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos14 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos14 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '</div>';
 
   htmlstring += '<div class="row no-gutters saved-team-row">';
   htmlstring += '<div class="col border-left border-right border-dark saved-team-col">';
   if (22 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[22] + '.png" class="pos22 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[22] + '.png" class="pos22 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos22 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos22 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '<div class="col saved-team-col">';
   if (23 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[23] + '.png" class="pos23 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[23] + '.png" class="pos23 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos23 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos23 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '<div class="col border-left border-right border-dark saved-team-col">';
   if (24 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[24] + '.png" class="pos24 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[24] + '.png" class="pos24 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos24 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos24 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '</div>';
 
   htmlstring += '<div class="row no-gutters saved-team-row">';
   htmlstring += '<div class="col border border-dark saved-team-col">';
   if (32 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[32] + '.png" class="pos32 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[32] + '.png" class="pos32 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos32 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos32 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '<div class="col border-top border-bottom border-dark saved-team-col">';
   if (33 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[33] + '.png" class="pos33 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[33] + '.png" class="pos33 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos33 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos33 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '<div class="col border border-dark saved-team-col">';
   if (34 in positions) {
-    htmlstring += '<img src="/static/girlsfrontline/sim/dolls/' + positions[34] + '.png" class="pos34 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/dolls/' + positions[34] + '.png" class="pos34 img-fluid position-absolute"></img></div>';
   } else {
-    htmlstring += '<img src="/static/girlsfrontline/sim/placeholder.png" class="pos34 img-fluid position-absolute"></img></div>';
+    htmlstring += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="pos34 img-fluid position-absolute"></img></div>';
   }
   htmlstring += '</div></div>';
 
@@ -847,9 +847,9 @@ function generateTeamsModal() {
     teamhtml += generateSavedTeamGrid(team);
     teamhtml += '<div class="col-2">';
     if (team.fairy.id != -1) {
-      teamhtml += '<img src="/static/girlsfrontline/sim/fairies/' + team.fairy.id + '.png" class="saved-fairy img-fluid"></img>';
+      teamhtml += '<img src="../../static/girlsfrontline/sim/fairies/' + team.fairy.id + '.png" class="saved-fairy img-fluid"></img>';
     } else {
-      teamhtml += '<img src="/static/girlsfrontline/sim/placeholder.png" class="saved-fairy img-fluid"></img>';
+      teamhtml += '<img src="../../static/girlsfrontline/sim/placeholder.png" class="saved-fairy img-fluid"></img>';
     }
     teamhtml += '</div>';
     teamhtml += '<div class="col"><textarea class="form-control saved-text" data-id="' + team.id + '" rows="9">' + team.savedText + '</textarea></div>';
@@ -1722,7 +1722,7 @@ function updateUIAllDolls() {
     if ($('#pos' + value).attr('data-index') != -1) {
       return true;
     }
-    $('#pos' + value + ' > img').attr('src', '/static/girlsfrontline/sim/placeholder.png');
+    $('#pos' + value + ' > img').attr('src', '../../static/girlsfrontline/sim/placeholder.png');
     $('#pos' + value + ' .tilegrid').prop('hidden', true);
     let tile_bonuses = ['fp', 'acc', 'eva', 'rof', 'crit', 'skillcd', 'armor'];
     for (let i = 0; i < tile_bonuses.length; i++) {
@@ -1762,7 +1762,7 @@ function updateUIAllDolls() {
 function updateUIForDoll(index) {
   let doll = echelon[index];
   if (doll.id == -1) {
-    $('#pos' + doll.pos + ' > img').attr('src', '/static/girlsfrontline/sim/placeholder.png');
+    $('#pos' + doll.pos + ' > img').attr('src', '../../static/girlsfrontline/sim/placeholder.png');
     $('#pos' + doll.pos + ' .tilegrid').prop('hidden', true);
     $('#doll' + (index + 1) + ' .skill-label').attr('data-original-title', '-');
     $('#doll' + (index + 1) + ' .skill2').css('visibility', 'hidden');
@@ -1880,7 +1880,7 @@ function updateUIForDoll(index) {
 
     $('#doll' + (index + 1) + '-dmg-label').text(doll.name);
 
-    $('#pos' + doll.pos + ' > img').attr('src', '/static/girlsfrontline/sim/dolls/' + doll.id + '.png');
+    $('#pos' + doll.pos + ' > img').attr('src', '../../static/girlsfrontline/sim/dolls/' + doll.id + '.png');
 
     $('#pos' + doll.pos + ' .tilegrid').prop('hidden', false);
     $('#pos' + doll.pos + ' .tilegrid').attr('data-original-title', doll.tooltip_tiles);
@@ -1913,11 +1913,11 @@ function updateUIForDoll(index) {
     let equipId = doll['equip' + i];
     if (equipId == -1) {
       $('#doll' + (index + 1) + ' .equip' + i).removeClass('stars5 stars4 stars3 stars2 stars1');
-      $('#doll' + (index + 1) + ' .equip' + i).attr('src', '/static/girlsfrontline/sim/placeholder.png');
+      $('#doll' + (index + 1) + ' .equip' + i).attr('src', '../../static/girlsfrontline/sim/placeholder.png');
     } else {
       $('#doll' + (index + 1) + ' .equip' + i).removeClass('stars5 stars4 stars3 stars2 stars1');
       $('#doll' + (index + 1) + ' .equip' + i).addClass('stars' + equipData[equipId - 1].rarity);
-      $('#doll' + (index + 1) + ' .equip' + i).attr('src', '/static/girlsfrontline/sim/equips/' + equipData[equipId - 1].type + '.png');
+      $('#doll' + (index + 1) + ' .equip' + i).attr('src', '../../static/girlsfrontline/sim/equips/' + equipData[equipId - 1].type + '.png');
     }
   }
 }
@@ -1926,7 +1926,7 @@ function updateUIForFairy() {
   if (fairy.id == -1) {
     $('#fairy-name').text('-');
     $('#fairy-dmg-label').text('-');
-    $('#fairy-img').attr('src', '/static/girlsfrontline/sim/placeholder.png');
+    $('#fairy-img').attr('src', '../../static/girlsfrontline/sim/placeholder.png');
     $('.fairy-skill-label').attr('data-original-title', '-');
     $('#fairy .fp span').text('-');
     $('#fairy .acc span').text('-');
@@ -1939,7 +1939,7 @@ function updateUIForFairy() {
     $('#fairy-name').css('border-bottom', '2px solid');
     $('#fairy-name').css('border-bottom-color', graphColors[5]);
     $('#fairy-dmg-label').text(fairy.name);
-    $('#fairy-img').attr('src', '/static/girlsfrontline/sim/fairies/' + fairy.id + '.png');
+    $('#fairy-img').attr('src', '../../static/girlsfrontline/sim/fairies/' + fairy.id + '.png');
     $('.fairy-skill-label').attr('data-original-title', fairy.tooltip_skill);
     $.each(['fp', 'acc', 'eva', 'armor', 'critdmg'], (i, stat) => {
       if (fairy.aura[stat] == 0) {
